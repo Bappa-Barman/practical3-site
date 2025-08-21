@@ -7,12 +7,11 @@
   <style>
     body {
       margin: 0;
-  font-family: Arial, sans-serif;
-  background: url("images/background.jpg") no-repeat center center; 
-  background-size: cover;
-  color: #fff;
-  text-align: center;
-
+      font-family: Arial, sans-serif;
+      background: url("images/background.jpg") no-repeat center center; 
+      background-size: cover;
+      color: #fff;
+      text-align: center;
     }
     header {
       background: linear-gradient(45deg, #1e1e2f, #292946);
@@ -37,12 +36,17 @@
     .content {
       padding: 40px;
     }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
     .card {
       display: inline-block;
       width: 250px;
       background: #1f1f2e;
       border-radius: 12px;
-      margin: 20px;
       overflow: hidden;
       box-shadow: 0px 4px 12px rgba(0,0,0,0.5);
       transition: transform 0.3s;
@@ -72,35 +76,31 @@
       color: #888;
     }
     /* 📱 Mobile adjustments */
-@media (max-width: 600px) {
-  header {
-    font-size: 1.5rem; /* smaller header text */
-    padding: 15px;
-  }
-
-  .banner {
-    font-size: 1.8rem; /* reduce banner text */
-    height: 250px; /* shorter banner */
-  }
-
-  .card {
-    width: 90%;  /* cards take almost full width */
-    margin: 15px auto; /* center cards on small screens */
-  }
-
-  .card h3 {
-    font-size: 1.2rem;
-  }
-
-  .card p {
-    font-size: 0.9rem;
-  }
-}
+    @media (max-width: 600px) {
+      header {
+        font-size: 1.5rem; /* smaller header text */
+        padding: 15px;
+      }
+      .banner {
+        font-size: 1.8rem; /* reduce banner text */
+        height: 250px; /* shorter banner */
+      }
+      .card {
+        width: 90%;  /* cards take almost full width */
+        margin: 15px auto; /* center cards on small screens */
+      }
+      .card h3 {
+        font-size: 1.2rem;
+      }
+      .card p {
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <header>🎮 Gaming Shop - Recharge Diamonds</header>
+  <header>🎮 Mobile Legends Gaming Shop - Recharge Diamonds</header>
 
   <div class="banner">
     Power Up Your Game!
@@ -109,45 +109,47 @@
   <div class="content">
     <h2>Popular Diamond Packs</h2>
 
-    <div class="card">
-      <img src="images/diamond3.jpg"alt="Diamonds Pack">
-      <h3>💎 80 Diamonds</h3>
-      <p>Price: ₹160</p>
-    </div>
-
-    <div class="card">
-      <img src="images/Diamond2.jpg" alt="Diamonds Pack">
-      <h3>💎 180 Diamonds</h3>
-      <p>Price: ₹289</p>
-    </div>
-
-    <div class="card">
-      <img src="images/download4.jpg" alt="Mega Pack">
-      <h3>💎 300 Diamonds</h3>
-      <p>Price: ₹420</p>
-    </div>
-  </div>
-  
-    <div class="card">
-      <img src="images/download4.jpg" alt="Mega Pack">
-      <h3>💎 500 Diamonds</h3>
-      <p>Price: ₹750</p>
-    </div>
-  </div>
+    <!-- ✅ wrapped cards inside a grid -->
+    <div class="cards">
 
       <div class="card">
-      <img src="images/download5.jpg" alt="Mega Pack">
-      <h3>💎 1500 Diamonds</h3>
-      <p>Price: ₹2019</p>
-    </div>
-  </div>
-  
+        <img src="images/diamond3.jpg" alt="Diamonds Pack">
+        <h3>💎 80 Diamonds</h3>
+        <p>Price: ₹160</p>
+      </div>
+
       <div class="card">
-      <img src="images/dowload6.jpg" alt="Mega Pack">
-      <h3>💎 6000 Diamonds</h3>
-      <p>Price: ₹859</p>
-    </div>
-  </div>
+        <img src="images/Diamond2.jpg" alt="Diamonds Pack">
+        <h3>💎 180 Diamonds</h3>
+        <p>Price: ₹289</p>
+      </div>
+
+      <div class="card">
+        <img src="images/download4.jpg" alt="Mega Pack">
+        <h3>💎 300 Diamonds</h3>
+        <p>Price: ₹420</p>
+      </div>
+
+      <div class="card">
+        <img src="images/download4.jpg" alt="Mega Pack">
+        <h3>💎 500 Diamonds</h3>
+        <p>Price: ₹750</p>
+      </div>
+
+      <div class="card">
+        <img src="images/download5.jpg" alt="Mega Pack">
+        <h3>💎 1500 Diamonds</h3>
+        <p>Price: ₹2019</p>
+      </div>
+
+      <div class="card">
+        <img src="images/dowload6.jpg" alt="Mega Pack">
+        <h3>💎 6000 Diamonds</h3>
+        <p>Price: ₹859</p>
+      </div>
+
+    </div> <!-- ✅ end .cards -->
+  </div> <!-- ✅ end .content -->
   
   <footer>
     © 2025 Gaming Shop | All Rights Reserved
