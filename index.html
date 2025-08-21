@@ -1,53 +1,109 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Diamond Recharge Shop — Demo</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming Shop - Diamond Recharge</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      background: linear-gradient(45deg, #1e1e2f, #292946);
+      padding: 20px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ffcc00;
+    }
+    .banner {
+      background-image: url("https://images.unsplash.com/photo-1611606063069-16d3a7adbb91?auto=format&fit=crop&w=1350&q=80");
+      background-size: cover;
+      background-position: center;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: white;
+      text-shadow: 2px 2px 10px black;
+    }
+    .content {
+      padding: 40px;
+    }
+    .card {
+      display: inline-block;
+      width: 250px;
+      background: #1f1f2e;
+      border-radius: 12px;
+      margin: 20px;
+      overflow: hidden;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 15px 0 5px;
+      color: #ffcc00;
+    }
+    .card p {
+      font-size: 14px;
+      padding: 0 10px 15px;
+      color: #bbb;
+    }
+    footer {
+      background: #111;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container">
-      <h1 class="brand">DiamondRecharge<span class="dot">.demo</span></h1>
-      <nav>
-        <button id="viewProductsBtn" class="nav-btn">Shop</button>
-        <button id="viewCartBtn" class="nav-btn">Cart (<span id="cartCount">0</span>)</button>
-      </nav>
+
+  <header>🎮 Gaming Shop - Recharge Diamonds</header>
+
+  <div class="banner">
+    Power Up Your Game!
+  </div>
+
+  <div class="content">
+    <h2>Popular Diamond Packs</h2>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1622288436322-52e8e1f1f1bb?auto=format&fit=crop&w=500&q=80" alt="Diamonds Pack">
+      <h3>💎 100 Diamonds</h3>
+      <p>Price: ₹80</p>
     </div>
-  </header>
 
-  <main class="container">
-    <section id="hero" class="hero">
-      <h2>Buy Diamonds for your favorite mobile game</h2>
-      <p>Fast — simple — demo only. (No real payments)</p>
-    </section>
-
-    <section id="productsSection" class="grid"></section>
-
-    <section id="cartSection" class="cart hidden">
-      <h2>Your Cart</h2>
-      <div id="cartList"></div>
-      <div class="cart-summary">
-        <div>Subtotal: <strong id="subtotal">₹0</strong></div>
-        <button id="checkoutBtn" class="primary">Checkout (Demo)</button>
-      </div>
-      <div id="checkoutMessage" class="checkout-message hidden"></div>
-    </section>
-
-    <section id="about" class="about">
-      <h3>About this demo</h3>
-      <p>This is a simple static demo site: Hosting a Static Website in the Cloud. It simulates an online recharge shop for game diamonds. No purchases are real — it only demonstrates a static front-end with simple cart logic.</p>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <small>© 2025 Bappa Barman — Demo project for Practical 3</small>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b6?auto=format&fit=crop&w=500&q=80" alt="Big Pack">
+      <h3>💎 500 Diamonds</h3>
+      <p>Price: ₹350</p>
     </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1590608897129-79da98d159d0?auto=format&fit=crop&w=500&q=80" alt="Mega Pack">
+      <h3>💎 1000 Diamonds</h3>
+      <p>Price: ₹650</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Gaming Shop | All Rights Reserved
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
-
