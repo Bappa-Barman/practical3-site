@@ -1,11 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Practical 3 Website</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diamond Recharge Shop — Demo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello from GitHub Pages!</h1>
-  <p>This is my Practical 3 cloud hosting website.</p>
+  <header class="topbar">
+    <div class="container">
+      <h1 class="brand">DiamondRecharge<span class="dot">.demo</span></h1>
+      <nav>
+        <button id="viewProductsBtn" class="nav-btn">Shop</button>
+        <button id="viewCartBtn" class="nav-btn">Cart (<span id="cartCount">0</span>)</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="hero" class="hero">
+      <h2>Buy Diamonds for your favorite mobile game</h2>
+      <p>Fast — simple — demo only. (No real payments)</p>
+    </section>
+
+    <section id="productsSection" class="grid"></section>
+
+    <section id="cartSection" class="cart hidden">
+      <h2>Your Cart</h2>
+      <div id="cartList"></div>
+      <div class="cart-summary">
+        <div>Subtotal: <strong id="subtotal">₹0</strong></div>
+        <button id="checkoutBtn" class="primary">Checkout (Demo)</button>
+      </div>
+      <div id="checkoutMessage" class="checkout-message hidden"></div>
+    </section>
+
+    <section id="about" class="about">
+      <h3>About this demo</h3>
+      <p>This is a static demo site for Practical 3: Hosting a Static Website in the Cloud. It simulates an online recharge shop for game diamonds. No purchases are real — it only demonstrates a static front-end with simple cart logic.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© 2025 Bappa Barman — Demo project for Practical 3</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
